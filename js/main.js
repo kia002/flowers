@@ -1,4 +1,27 @@
 $(document).ready(function () {
+  $("#review-1").on('click', function() {
+
+  $.fancybox.open([
+    {
+      src  : 'https://volzhskiy.floratelier.ru/upload/iblock/663/6636b04ee4c62a50112ceeef1b198e8d.jpg',
+      opts : {
+        caption : 'Общий вид букета',
+      }
+    },
+    {
+      src  : 'https://volzhskiy.floratelier.ru/upload/iblock/117/1175cd6bb2427533d0a476f6d67fa10e.jpg',
+      opts : {
+        caption : 'Букет в руках',
+      }
+    }
+  ], {
+    loop : true,
+    thumbs : {
+      autoStart : true
+    }
+  });
+});
+
   const flowersSwiper = new Swiper('.flowers-slider', {
     // параметры слайдера
     loop: true,// Слайдер будет бесконечно работать
@@ -41,32 +64,6 @@ const freviewsSwiper = new Swiper('.reviews-slider', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-});
-
-$("#review-1").on('click', function() {
-
-  $.fancybox.open([
-    {
-      src  : 'https://volzhskiy.floratelier.ru/upload/iblock/663/6636b04ee4c62a50112ceeef1b198e8d.jpg',
-      opts : {
-        caption : 'Общий вид букета',
-        thumb   : url('../img/reviews/review-1.1.jpg')
-      }
-    },
-    {
-      src  : 'https://volzhskiy.floratelier.ru/upload/iblock/117/1175cd6bb2427533d0a476f6d67fa10e.jpg',
-      opts : {
-        caption : 'Размер букета',
-        thumb   : url('../img/reviews/review-1.2.jpg')
-      }
-    }
-  ], {
-    loop : true,
-    thumbs : {
-      autoStart : true
-    }
-  });
-
 });
 
 });
